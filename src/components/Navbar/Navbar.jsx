@@ -18,8 +18,7 @@ const Navbar = () => {
           cleanliness.
         </Typography>
     </Box>
-    <div className='navContainer'>
-    <Container maxWidth={'xl'}>
+    <Container sx={{maxWidth:'90% !important'}}>
         <Stack direction={'row'} alignItems={'center'} justifyContent={'space-between'} py={2} spacing={2}>
             <Link to={'/'}>
             <img src={logo} alt="medilify" height={27} />
@@ -32,7 +31,7 @@ const Navbar = () => {
                 <Link>Software for providers</Link>
                 <Link>Facilities</Link>
             <Link to="/my-bookings">
-              <Button variant="contained" disableElevation>
+              <Button variant="contained" disableElevation sx={{backgroundColor:'#2AA7FF','&:hover':{backgroundColor:'#238DD9'},borderRadius:'8px',textTransform: 'none'}}>
                 My Bookings
               </Button>
             </Link>
@@ -42,10 +41,9 @@ const Navbar = () => {
             </Stack>
             {isMobile && <IconButton onClick={()=>setMenuOpen(true)}>
                 <MenuIcon />
-                </IconButton>}
+            </IconButton>}
         </Stack>
     </Container>
-    </div>
     </nav>
   )
 }

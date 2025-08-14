@@ -1,13 +1,8 @@
 .links a{
     text-decoration: none;
     color: #102851;
-    font-size: 18px;
+    font-size: 16x;
 }
-.navContainer{
-    margin-left: 30px;
-    margin-right: 30px;
-}
-
 @media (max-width: 900px) {
   .links {
     background: #102851;
