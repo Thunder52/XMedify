@@ -69,7 +69,7 @@ const SearchHospital = () => {
             ))}
         </Select>
         </FormControl>
-        <Button variant='contained' sx={{backgroundColor:'#2AA7FF','&:hover':{backgroundColor:'#238DD9'},borderRadius:'8px',textTransform: 'none'}}><SearchIcon /> Search</Button>
+        <Button type='submit' variant='contained' sx={{backgroundColor:'#2AA7FF','&:hover':{backgroundColor:'#238DD9'},borderRadius:'8px',textTransform: 'none'}}><SearchIcon /> Search</Button>
     </Box>
   )
 }

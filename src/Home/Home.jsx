@@ -3,9 +3,11 @@ import Hero from '../components/Hero/Hero'
 import { Box, Container, Stack } from '@mui/material'
 import SearchHospital from '../components/SearchHospital/SearchHospital'
 import HeroServices from '../components/HeroServices/HeroServices'
-import Offer from '../components/Offer/Offer'
-import Specialization from '../components/Specialization/Specialization'
-import Specialist from '../components/Specialist/Specialist'
+import Offer from '../components/Section/Offer/Offer'
+import Specialization from '../components/Section/Specialization/Specialization'
+import Specialist from '../components/Section/Specialist/Specialist'
+import PatientCaring from '../components/Section/PatientCaring/PatientCaring'
+import Blogs from '../components/Section/Blogs/Blogs'
 
 const Home = () => {
   return (
@@ -23,6 +25,8 @@ const Home = () => {
     <Offer />
     <Specialization />
     <Specialist />
+    <PatientCaring />
+    <Blogs />
     </Box>
   )
 }

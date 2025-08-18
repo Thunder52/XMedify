@@ -1,8 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination,Autoplay } from "swiper/modules";
 import { Box, Container } from "@mui/material";
-import offerImage1 from "../../assets/offer1.jpg";
-import offerImage2 from "../../assets/offer2.jpg";
+import offerImage1 from "../../../assets/offer1.jpg";
+import offerImage2 from "../../../assets/offer2.jpg";
 import "swiper/css";
 import "swiper/css/pagination";
 

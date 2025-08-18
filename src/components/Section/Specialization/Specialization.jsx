@@ -1,12 +1,12 @@
 import { Box, Container, Grid, Typography, Button } from "@mui/material";
-import storeIcon from "../../assets/Drugstore.png";
-import primaryCareIcon from "../../assets/primary-care.png";
-import cardiologyIcon from "../../assets/cardiology.png";
-import mriIcon from "../../assets/mri-removebg-preview.png";
-import bloodTesticon from "../../assets/blood-test-removebg-preview.png";
-import piscologistIcon from "../../assets/piscologist-removebg-preview.png";
-import xrayIcon from "../../assets/X-Ray-removebg-preview.png";
-import IconCard from "../IconCard/IconCard";
+import storeIcon from "../../../assets/Drugstore.png";
+import primaryCareIcon from "../../../assets/primary-care.png";
+import cardiologyIcon from "../../../assets/cardiology.png";
+import mriIcon from "../../../assets/mri-removebg-preview.png";
+import bloodTesticon from "../../../assets/blood-test-removebg-preview.png";
+import piscologistIcon from "../../../assets/piscologist-removebg-preview.png";
+import xrayIcon from "../../../assets/X-Ray-removebg-preview.png";
+import IconCard from "../../IconCard/IconCard";
 
 const data = [
   { icon: storeIcon, title: "Dentistry" },

@@ -1,11 +1,11 @@
 import { Box, Typography } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
-import doctor1 from "../../assets/ahmad-stevens.png";
-import doctor2 from "../../assets/ahmad.png";
-import doctor3 from "../../assets/ankur.png";
-import doctor4 from "../../assets/lesley.png";
-import doctor5 from "../../assets/heena.png";
+import doctor1 from "../../../assets/ahmad-stevens.png";
+import doctor2 from "../../../assets/ahmad.png";
+import doctor3 from "../../../assets/ankur.png";
+import doctor4 from "../../../assets/lesley.png";
+import doctor5 from "../../../assets/heena.png";
 import Card from "./Card";
 
 const data = [
@@ -43,8 +43,8 @@ const Specialist = () => {
         style={{paddingBottom:"40px"}}
 
       >
-        {data.map((doctor)=>(
-            <SwiperSlide key={doctor.name}><Card image={doctor.img} field={doctor.field} name={doctor.name}/></SwiperSlide>
+        {data.map((doctor,index)=>(
+            <SwiperSlide key={index}><Card image={doctor.img} field={doctor.field} name={doctor.name}/></SwiperSlide>
         ))}
       </Swiper>
     </Box>
