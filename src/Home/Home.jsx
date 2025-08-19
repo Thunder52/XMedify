@@ -30,7 +30,6 @@ const Home = () => {
     <PatientCaring />
     <Blogs />
     <OurFamilies />
-    <FAQ />
     </Box>
   )
 }

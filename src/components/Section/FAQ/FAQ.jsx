@@ -41,7 +41,7 @@ const FAQ = () => {
         <Box component={"img"} src={image} height={500} borderRadius={3}/>
         <Stack gap={5} width={500} >
         {data.map((accoData, index) => (
-          <Accordion sx={{border:"none"}} key={index} disableGutters elevation={0} square               sx={{
+          <Accordion key={index} disableGutters elevation={0} square sx={{
                 border: "none",
                 boxShadow: "none",
                 "&:before": { display: "none" },
