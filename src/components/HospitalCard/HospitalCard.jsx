@@ -13,23 +13,22 @@ const HospitalCard = ({ hospital, handleBooking, slots, booking = false }) => {
       <Stack direction={"row"} spacing={4} flexWrap={"wrap"}>
         <Box component={"img"} src={image} width={130} height={130} />
         <Box flex={1}>
-          {/* <h3
+          <Typography
             component={"h3"}
             className="MuiAccordion-heading css-wnfves"
             mb={1}
-            textTransform={"capitalize"}
             fontWeight={600}
             fontSize={20}
             color="#14BEF0"
           >
             {hospital["Hospital Name"].toLowerCase()}
-          </h3> */}
-          <h3
+          </Typography>
+          {/* <h3
             style={{ color: "#14BEF0", marginBottom: "8px" }}
             className="MuiAccordion-heading css-wnfves"
           >
             {hospital["Hospital Name"].toLowerCase()}
-          </h3>
+          </h3> */}
           <Typography
             textTransform={"capitalize"}
             fontWeight={700}
