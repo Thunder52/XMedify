@@ -15,6 +15,7 @@ const HospitalCard = ({ hospital, handleBooking,slots, booking = false}) => {
         <Box flex={1}>
           <Typography
             component={"h3"}
+             className="MuiAccordion-heading css-wnfves"
             mb={1}
             textTransform={"capitalize"}
             fontWeight={600}

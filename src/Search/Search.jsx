@@ -97,7 +97,7 @@ https://meddata-backend.onrender.com/data?state=${state}&city=${city}`);
         <Container sx={{maxWidth:'90%'}}>
         {hospitals.length>0 && (
           <Box mb={3}>
-          <Typography textTransform={'lowercase'} component={'h1'} mb={2} fontWeight={500} fontSize={24} color="#000000">{hospitals.length} medical centers available in <span style={{textTransform:'capitalize'}}>{city}</span></Typography>
+          <Typography component={'h1'} mb={2} fontWeight={500} fontSize={24} color="#000000">{hospitals.length} medical centers available in <span>{city.toLowerCase()}</span></Typography>
           <Stack direction={'row'} spacing={2}>
             <Box component={'img'} src={tick} alt="white tick" height={24} width={24}/>
             <Typography color="#787887" fontWeight={400} fontSize={16}>Book appointments with minimum wait-time & verified doctor details</Typography>
