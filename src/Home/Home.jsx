@@ -1,4 +1,4 @@
-import Navbar from '../components/Navbar/Navbar'
+import Navbar from '../components/NavBar/NavBar'
 import Hero from '../components/Hero/Hero'
 import { Box, Container, Stack } from '@mui/material'
 import SearchHospital from '../components/SearchHospital/SearchHospital'

@@ -2,7 +2,7 @@ import { Box,Typography,Container,Stack,Button,useMediaQuery,IconButton } from '
 import { useState } from 'react'
 import logo from '../../assets/logo.png'
 import {Link} from 'react-router-dom'
-import './navbar.css'
+import './NavBar.css'
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
 
