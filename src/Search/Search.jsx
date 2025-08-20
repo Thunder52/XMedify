@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Navbar from "../components/NavBar/Navbar";
+import Navbar from "../components/Navbar/Navbar";
 import { useSearchParams } from "react-router-dom";
 import axios from "axios";
 import { Box, Container, Stack, Typography } from "@mui/material";

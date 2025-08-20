@@ -1,4 +1,4 @@
-import Navbar from "../components/NavBar/Navbar";
+import Navbar from "../components/Navbar/Navbar";
 import {Box,Typography,Container,Stack} from '@mui/material'
 import SearchBar from "../components/SearchBar/SearchBar";
 import { useEffect, useState } from "react";
