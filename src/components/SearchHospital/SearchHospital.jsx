@@ -53,7 +53,7 @@ const SearchHospital = () => {
         <InputLabel id="state"><SearchIcon style={{ verticalAlign: 'middle', marginRight: 4 }}/> 
         State
         </InputLabel>
-        <Select labelId='states' id='states' name='state' value={data.state} onChange={(e)=>handleChange(e)} required sx={{minWidth:300,width:'100%'}}>
+        <Select labelId='state' id='state' name='state' value={data.state} onChange={(e)=>handleChange(e)} required sx={{minWidth:300,width:'100%'}}>
             {states.map((state)=>(
                 <MenuItem value={state}>{state}</MenuItem>
             ))}
@@ -63,7 +63,7 @@ const SearchHospital = () => {
         <InputLabel id="city"><SearchIcon style={{ verticalAlign: 'middle', marginRight: 4 }}/> 
         city
         </InputLabel>
-        <Select labelId='cities' id='cities' name='city' value={data.city} onChange={(e)=>handleChange(e)} required sx={{minWidth:300,width:'100%'}}>
+        <Select labelId='city' id='city' name='city' value={data.city} onChange={(e)=>handleChange(e)} required sx={{minWidth:300,width:'100%'}}>
             {data.state && cities.map((city)=>(
                 <MenuItem value={city}>{city}</MenuItem>
             ))}
