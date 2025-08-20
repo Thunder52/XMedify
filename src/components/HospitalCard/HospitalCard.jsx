@@ -3,9 +3,9 @@ import { Box, Divider, Stack, Typography, Button, Chip } from "@mui/material";
 import like from "../../assets/thumbsup.png";
 import { useState } from "react";
 import Calender from "../Calender/Calender";
-import {format} from 'date-fns'
+import { format } from "date-fns";
 
-const HospitalCard = ({ hospital, handleBooking,slots, booking = false}) => {
+const HospitalCard = ({ hospital, handleBooking, slots, booking = false }) => {
   const [show, setShow] = useState(false);
 
   return (
@@ -24,7 +24,12 @@ const HospitalCard = ({ hospital, handleBooking,slots, booking = false}) => {
           >
             {hospital["Hospital Name"].toLowerCase()}
           </h3> */}
-          <h3 style={{color:"#14BEF0",marginBottom:"8px"}} className="MuiAccordion-heading css-wnfves">{hospital["Hospital Name"].toLowerCase()}</h3>
+          <h3
+            style={{ color: "#14BEF0", marginBottom: "8px" }}
+            className="MuiAccordion-heading css-wnfves"
+          >
+            {hospital["Hospital Name"].toLowerCase()}
+          </h3>
           <Typography
             textTransform={"capitalize"}
             fontWeight={700}
@@ -95,15 +100,37 @@ const HospitalCard = ({ hospital, handleBooking,slots, booking = false}) => {
             </>
           ) : (
             <>
-              <Stack direction={'row'} spacing={1} mt={{xs:2,md:0}}>
-                <Chip variant="outlined" label={hospital.bookingTime} sx={{borderColor:"#2AA7FF",borderRadius:1,color:"#2AA7FF"}} />
-                <Chip variant="outlined" label={format(new Date(hospital.bookingDate), "dd MMMM yyyy")} sx={{borderColor:"#00A500",borderRadius:1,color:"#00A500"}} />
+              <Stack direction={"row"} spacing={1} mt={{ xs: 2, md: 0 }}>
+                <Chip
+                  variant="outlined"
+                  label={hospital.bookingTime}
+                  sx={{
+                    borderColor: "#2AA7FF",
+                    borderRadius: 1,
+                    color: "#2AA7FF",
+                  }}
+                />
+                <Chip
+                  variant="outlined"
+                  label={format(new Date(hospital.bookingDate), "dd MMMM yyyy")}
+                  sx={{
+                    borderColor: "#00A500",
+                    borderRadius: 1,
+                    color: "#00A500",
+                  }}
+                />
               </Stack>
             </>
           )}
         </Stack>
       </Stack>
-      {show && <Calender hospital={hospital} slots={slots} handleBooking={handleBooking}/>}
+      {show && (
+        <Calender
+          hospital={hospital}
+          slots={slots}
+          handleBooking={handleBooking}
+        />
+      )}
     </Box>
   );
 };

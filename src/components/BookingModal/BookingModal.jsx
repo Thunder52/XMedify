@@ -11,9 +11,9 @@ const BookingModal = ({open,setOpen,bookingDetail,setSuccess}) => {
     }
 
     const handleConfirm=()=>{
-        const data=localStorage.getItem('booking')||"[]";
+        const data=localStorage.getItem('bookings')||"[]";
         const oldBooking=JSON.parse(data);
-        localStorage.setItem('booking',JSON.stringify([...oldBooking,bookingDetail]))
+        localStorage.setItem('bookings',JSON.stringify([...oldBooking,bookingDetail]))
         setSuccess(true);
         setOpen(false);
     }

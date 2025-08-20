@@ -10,7 +10,7 @@ const MyBooking = () => {
   const [filteredBooking, setFilteredBooking] = useState([]);
 
   useEffect(()=>{
-    const data=localStorage.getItem('booking')||'[]';
+    const data=localStorage.getItem('bookings')||'[]';
     setBooking(JSON.parse(data)); 
   },[]);
 
