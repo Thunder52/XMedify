@@ -1,4 +1,4 @@
-import Navbar from '../components/NavBar/Navbar'
+import Navbar from '../components/Navbar/Navbar'
 import Hero from '../components/Hero/Hero'
 import { Box, Container, Stack } from '@mui/material'
 import SearchHospital from '../components/SearchHospital/SearchHospital'
@@ -9,7 +9,6 @@ import Specialist from '../components/Section/Specialist/Specialist'
 import PatientCaring from '../components/Section/PatientCaring/PatientCaring'
 import Blogs from '../components/Section/Blogs/Blogs'
 import OurFamilies from '../components/Section/OurFamilies/OurFamilies'
-import FAQ from '../components/Section/FAQ/FAQ'
 
 const Home = () => {
   return (
