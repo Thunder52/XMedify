@@ -14,6 +14,7 @@ const HospitalCard = ({ hospital, handleBooking,slots, booking = false}) => {
         <Box component={"img"} src={image} width={130} height={130} />
         <Box flex={1}>
           <Typography
+            component={"h3"}
             mb={1}
             textTransform={"capitalize"}
             fontWeight={600}
@@ -93,8 +94,8 @@ const HospitalCard = ({ hospital, handleBooking,slots, booking = false}) => {
           ) : (
             <>
               <Stack direction={'row'} spacing={1} mt={{xs:2,md:0}}>
-                <Chip variant="outlined" label={hospital.bookingTime} color="#2AA7FF"/>
-                <Chip variant="outlined" label={format(new Date(hospital.bookingDate), "dd MMMM yyyy")} color="#00A500"/>
+                <Chip variant="outlined" label={hospital.bookingTime} sx={{borderColor:"#2AA7FF",borderRadius:1,color:"#2AA7FF"}} />
+                <Chip variant="outlined" label={format(new Date(hospital.bookingDate), "dd MMMM yyyy")} sx={{borderColor:"#00A500",borderRadius:1,color:"#00A500"}} />
               </Stack>
             </>
           )}

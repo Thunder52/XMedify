@@ -50,7 +50,7 @@ const SearchHospital = () => {
   return (
     <Box component={'form'} onSubmit={handleSubmit} sx={{display:'flex',flexDirection:{sm:'column' ,md:'row'},gap:4,justifyContent:'center'}}>
         <FormControl >
-        <InputLabel id="states"><SearchIcon style={{ verticalAlign: 'middle', marginRight: 4 }}/> 
+        <InputLabel id="state"><SearchIcon style={{ verticalAlign: 'middle', marginRight: 4 }}/> 
         State
         </InputLabel>
         <Select labelId='states' id='states' name='state' value={data.state} onChange={(e)=>handleChange(e)} required sx={{minWidth:300,width:'100%'}}>
@@ -60,7 +60,7 @@ const SearchHospital = () => {
         </Select>
         </FormControl>
         <FormControl>
-        <InputLabel id="cities"><SearchIcon style={{ verticalAlign: 'middle', marginRight: 4 }}/> 
+        <InputLabel id="city"><SearchIcon style={{ verticalAlign: 'middle', marginRight: 4 }}/> 
         city
         </InputLabel>
         <Select labelId='cities' id='cities' name='city' value={data.city} onChange={(e)=>handleChange(e)} required sx={{minWidth:300,width:'100%'}}>
@@ -69,7 +69,7 @@ const SearchHospital = () => {
             ))}
         </Select>
         </FormControl>
-        <Button type='submit' variant='contained' sx={{backgroundColor:'#2AA7FF','&:hover':{backgroundColor:'#238DD9'},borderRadius:'8px',textTransform: 'none'}}><SearchIcon /> Search</Button>
+        <Button id="searchBtn" type='submit' variant='contained' sx={{backgroundColor:'#2AA7FF','&:hover':{backgroundColor:'#238DD9'},borderRadius:'8px',textTransform: 'none'}}><SearchIcon /> Search</Button>
     </Box>
   )
 }

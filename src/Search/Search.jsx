@@ -8,6 +8,7 @@ import tick from '../assets/tick (1).png'
 import HospitalCard from "../components/HospitalCard/HospitalCard";
 import cta from '../assets/cta.jpg'
 import BookingModal from "../components/BookingModal/BookingModal";
+import AutohideSnackbar from "../components/AutohideSnackbar/AutohideSnackbar";
 
 const slots = {
   morning: ["11:30 AM"],
@@ -23,7 +24,7 @@ const slots = {
 };
 
 const Search = () => {
-  const [searchParam, setSearchParam] = useSearchParams();
+  const [searchParam] = useSearchParams();
   const [hospitals, setHospitals] = useState([]);
   const [city, setCity] = useState(searchParam.get("city"));
   const [state, setState] = useState(searchParam.get("state"));
@@ -96,7 +97,7 @@ https://meddata-backend.onrender.com/data?state=${state}&city=${city}`);
         <Container sx={{maxWidth:'90%'}}>
         {hospitals.length>0 && (
           <Box mb={3}>
-          <Typography mb={2} fontWeight={500} fontSize={24} color="#000000">{hospitals.length} medical centers available in {city}</Typography>
+          <Typography component={'h1'} mb={2} fontWeight={500} fontSize={24} color="#000000">{hospitals.length} medical centers available in {city}</Typography>
           <Stack direction={'row'} spacing={2}>
             <Box component={'img'} src={tick} alt="white tick" height={24} width={24}/>
             <Typography color="#787887" fontWeight={400} fontSize={16}>Book appointments with minimum wait-time & verified doctor details</Typography>
@@ -109,7 +110,7 @@ https://meddata-backend.onrender.com/data?state=${state}&city=${city}`);
               <HospitalCard key={hospital.id} hospital={hospital} slots={slots} handleBooking={handleBooking} />
             ))}
           </Stack>
-          {isLoading&& (
+          {isLoading && (
             <Typography variant="h2" bgcolor={"white"} p={3} borderRadius={2}>Loading...</Typography>
           )}
           {!state &&(
@@ -118,7 +119,8 @@ https://meddata-backend.onrender.com/data?state=${state}&city=${city}`);
           <Box component={'img'} src={cta} width={350}/>
         </Stack>
   </Container>
-  <BookingModal open={open} setOpen={setOpen} bookingDetail={booking} success={success}/>
+  <BookingModal open={open} setOpen={setOpen} bookingDetail={booking} setSuccess={setSuccess}/>
+  <AutohideSnackbar open={success} setOpen={setSuccess} />
       </Box>
     </>
   );

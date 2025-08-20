@@ -8,7 +8,7 @@ const TimeSLot = ({selectedDate,slots,handleBooking,hospital}) => {
     <Stack pt={3} spacing={{md:3,sx:2}} divider={<Divider orientation="horizontal" flexItem />}>
         {slots.morning.length>0 && (
             <Stack direction={'row'} alignItems={'center'} flexWrap={'wrap'} spacing={2}>
-                <Typography fontWeight={400} color="#414146" fontSize={{xs:14,md:16}} width={'15%'}>
+                <Typography component={'p'} fontWeight={400} color="#414146" fontSize={{xs:14,md:16}} width={'15%'}>
                     Morning
                 </Typography>
                 {slots.morning.map((slot)=>(
@@ -18,7 +18,7 @@ const TimeSLot = ({selectedDate,slots,handleBooking,hospital}) => {
         )}
         {slots.afternoon.length>0 && (
             <Stack direction={'row'} alignItems={'center'} flexWrap={'wrap'} spacing={2} >
-                <Typography fontWeight={400} color="#414146" fontSize={{xs:14,md:16}} width={'15%'}>
+                <Typography component={'p'} fontWeight={400} color="#414146" fontSize={{xs:14,md:16}} width={'15%'}>
                     Afternoon
                 </Typography>
                 {slots.afternoon.map((slot)=>(
@@ -28,7 +28,7 @@ const TimeSLot = ({selectedDate,slots,handleBooking,hospital}) => {
         )}
         {slots.evening.length>0 && (
             <Stack direction={'row'} alignItems={'center'} flexWrap={'wrap'} spacing={2} >
-                <Typography fontWeight={400} color="#414146" fontSize={{xs:14,md:16}} width={'15%'}>
+                <Typography component={'p'} fontWeight={400} color="#414146" fontSize={{xs:14,md:16}} width={'15%'}>
                     Evening
                 </Typography>
                 {slots.evening.map((slot)=>(
